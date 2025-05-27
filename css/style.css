@@ -22,10 +22,10 @@ body {
 
 }
   
-/* img {
+img {
     max-width: 100%;
     display: block;
-} */
+}
 
 .container {
     max-width: 1280px;
@@ -240,42 +240,56 @@ main {
 .footer {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 25px 50px;
     background-color: var(--bg-color);
 }
-  
+
 .footer-grid {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    /* gap: 1rem; */
+    gap: 2rem;
     border-top: 1px solid var(--text-muted);
     padding: 50px 0;
+    position: relative;
 }
   
-.footer-left a {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 32px;
-    letter-spacing: 0;
-    color: var(--text-light);
-    text-decoration: none;
-    margin-right: 30px;
-}
-
-.footer-right {
+  .footer-logo {
+    order: 0;
+  }
+  
+  .footer-links {
+    order: 2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     gap: 20px;
-}
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 50px;
+    
+  }
 
-.footer-right form {
+    .footer-links a {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0;
+        color: var(--text-light);
+        text-decoration: none;
+        margin-right: 30px;
+    }
+  
+  .footer-form {
+    order: 1;
     display: flex;
-    gap: 20px;
-    align-items: center;
+    gap: 15px;
+    /* align-items: center; */
     flex-wrap: nowrap;
-}
-  
-.footer-right input[type="email"] {
+    flex-direction: column;
+  }
+
+  .footer-form input[type="email"] {
     width: 301px;
     outline: none;
     padding: 12px 30px;
@@ -287,7 +301,7 @@ main {
     
 }
   
-.footer-right button {
+.footer-form button {
     background-color: var(--accent-color);
     color: #333333;
     font-weight: 400;
@@ -302,10 +316,6 @@ main {
     display: none;
 }
 
-.footer-mobile{
-    display: none;
-}
-  
 
 @media (max-width: 1200px) {
     .container, .testimonial .container {
@@ -333,10 +343,19 @@ main {
     }
 
     .footer-grid {
+        display: flex;
+        flex-direction: column;
         justify-content: start;
         flex-wrap: wrap-reverse;
         gap: 2rem;
     }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+        flex-wrap: wrap;
+        position: static;
   }
 
   .burger {
@@ -345,13 +364,16 @@ main {
 
 
 
-  
-  /* Mobile styles */
+
   @media (max-width: 1024px) {
     header .container, footer .container { 
         padding: 20px 30px;
         display: flex;
         flex-direction: row;
+    }
+
+    .testimonial {
+        margin: 30px 20px;
     }
 
     .container{
@@ -369,7 +391,7 @@ main {
 
     .cta {
         margin: 0;
-        padding: 50px 20px;
+        /* padding: 50px 20px; */
     }
 
     .burger {
@@ -379,6 +401,11 @@ main {
 
 
 @media (max-width: 600px) {
+    .container {
+        /* max-width: 375px; */
+        margin: 0 auto;
+    }
+
     .header{
         position: relative;
         z-index: 1;
@@ -493,21 +520,7 @@ main {
     }
 
 
-  .footer-logo{
-    display: none;
-  }
-
-  .footer-mobile{
-    display: block;
-    border-top: 1px solid var(--text-muted);
-    padding: 50px 0;
-  }
-
-  .footer .container{
-    display: none;
-  }
-
-  .footer-links {
+/* .footer-links {
         display: flex;
         flex-direction: column-reverse;
         margin-top: 40px;
@@ -527,31 +540,43 @@ main {
   .footer-right form {
     flex-direction: column;
     gap: 15px;
+} */
+
+  
+
+  .footer-grid {
+    flex-direction: column;
   }
 
-  .footer-right input[type="email"],
-  .footer-right button {
+  .footer-logo {
+    order: 3;
+    margin-top: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    order: 1;
+    position: static;
+  }
+
+  .footer-form {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-form input[type="email"],
+  .footer-form button {
     width: 100%;
     margin: 0;
   }
 
-  /* Typography */
-  /* h1, h2 {
-    font-size: 32px;
-    line-height: 44px;
+  .footer-form input[type="email"]{
+    margin-bottom: 20px;
   }
 
-  p {
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .btn {
-    padding: 10px 24px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-  } */
+}
 }
     
   
