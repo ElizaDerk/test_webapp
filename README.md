@@ -23,11 +23,11 @@ The layout is created using **pure HTML5 and CSS3** without any external librari
 
 ## 📁 Project Structure
 📦 test_webapp/
-├── 📁 img/ # Images
-├── 📁 css/ # Styles
-│ ├── styles.css
-│ └── reset.css
-├── 📄 index.html
+- 📁 img/ # Images
+- 📁 css/ # Styles
+  - styles.css
+  - reset.css
+- 📄 index.html
 
 ## 🚀 Live Demo
 The project is deployed via GitHub Pages:
