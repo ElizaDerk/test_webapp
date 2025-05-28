@@ -381,6 +381,10 @@ main {
             align-items: center;
         }
 
+        .testimonial .container {
+            margin: 0 20px;
+        }
+
         .hero-image,
         .cta-image {
             margin-top: 60px;
@@ -517,6 +521,10 @@ main {
         .testimonial {
             padding: 50px 20px;
             text-align: center;
+        }
+
+        .testimonial .container {
+            margin: 0 0px;
         }
 
 
