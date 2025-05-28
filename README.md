@@ -41,4 +41,5 @@ The project is deployed via GitHub Pages:
 ```bash
 git clone https://github.com/ElizaDerk/test_webapp.git
 
+
 2. Open index.html in your browser.
